@@ -1,79 +1,3 @@
-# N-grams
-
-**Objective:**
-
-* Analyze textual data by extracting and visualizing n-gram frequencies (unigrams, bigrams, trigrams).
-
-**Data & Preprocessing:**
-
-* Loaded the dataset of text documents.
-* Performed basic cleaning: lowercasing, punctuation removal, and tokenization.
-
-**N-gram Extraction:**
-
-1. **Unigrams**: Computed the top 20 most frequent single words.
-2. **Bigrams**: Computed the top 20 most frequent two-word sequences.
-3. **Trigrams**: Computed the top 20 most frequent three-word sequences.
-
-**Visualization & Results:**
-
-* Plotted bar charts for each n-gram level showing frequency counts.
-
-  * **Unigrams:** Common words revealed: `the`, `and`, `to`, etc.
-  * **Bigrams:** Frequent pairs such as `of the`, `in the`, `to the`.
-  * **Trigrams:** Common triples like `one of the`, `as well as`.
-
-**Key Insights:**
-
-* Stopwords dominate unigram frequencies, suggesting more aggressive stopword filtering could focus on meaningful terms.
-* Bigrams and trigrams highlight common phrases and potential collocations relevant for downstream tasks (e.g., phrase detection).
-
----
-
-# Similarities between texts
-
-**Objective:**
-
-* Measure and visualize similarity between text documents using vector-based approaches.
-
-**Data & Preprocessing:**
-
-* Loaded multiple text documents from the shared folder.
-* Cleaned and tokenized texts similar to the previous notebook.
-
-**Feature Representations:**
-
-1. **TF-IDF Vectors:** Transformed each document into a TF-IDF vector.
-2. **Word Embeddings:** Generated document embeddings by averaging Word2Vec vectors.
-
-**Similarity Calculations:**
-
-* Computed pairwise cosine similarities between all document vectors.
-* Presented similarity matrices for both TF-IDF and Word2Vec embeddings.
-
-**Visualization & Results:**
-
-* **Heatmaps** for TF-IDF and embedding-based similarities:
-
-  * Highlighted clusters of highly similar documents.
-* **Dendrogram** from hierarchical clustering on similarity distances:
-
-  * Showed document grouping structure.
-
-**Key Findings:**
-
-* TF-IDF and embedding-based similarities largely agree on document clusters.
-* Embeddings capture semantic relationships not obvious in keyword overlap (TF-IDF), e.g., synonyms or paraphrases.
-
----
-
-**Conclusion:**
-
-* The **N-grams.ipynb** notebook provides a foundation for understanding the most frequent terms and phrases in a corpus, useful for feature engineering.
-* The **Similarities between texts.ipynb** notebook demonstrates methods to quantify and visualize document similarity, critical for tasks like clustering, retrieval, and recommendation.
-
-
-
 # Document Classification
 
 This notebook performs both **unsupervised** and **supervised** classification on a spam email dataset, including hyperparameter optimization. Below is an outline of each step, with explanations of what was done and why.
@@ -206,7 +130,81 @@ For each, we:
 2. Printed the best parameter combination.
 3. Stored the results for comparison.
 
+
+# N-grams
+
+**Objective:**
+
+* Analyze textual data by extracting and visualizing n-gram frequencies (unigrams, bigrams, trigrams).
+
+**Data & Preprocessing:**
+
+* Loaded the dataset of text documents.
+* Performed basic cleaning: lowercasing, punctuation removal, and tokenization.
+
+**N-gram Extraction:**
+
+1. **Unigrams**: Computed the top 20 most frequent single words.
+2. **Bigrams**: Computed the top 20 most frequent two-word sequences.
+3. **Trigrams**: Computed the top 20 most frequent three-word sequences.
+
+**Visualization & Results:**
+
+* Plotted bar charts for each n-gram level showing frequency counts.
+
+  * **Unigrams:** Common words revealed: `the`, `and`, `to`, etc.
+  * **Bigrams:** Frequent pairs such as `of the`, `in the`, `to the`.
+  * **Trigrams:** Common triples like `one of the`, `as well as`.
+
+**Key Insights:**
+
+* Stopwords dominate unigram frequencies, suggesting more aggressive stopword filtering could focus on meaningful terms.
+* Bigrams and trigrams highlight common phrases and potential collocations relevant for downstream tasks (e.g., phrase detection).
+
 ---
 
-**Result:**
+# Similarities between texts
+
+**Objective:**
+
+* Measure and visualize similarity between text documents using vector-based approaches.
+
+**Data & Preprocessing:**
+
+* Loaded multiple text documents from the shared folder.
+* Cleaned and tokenized texts similar to the previous notebook.
+
+**Feature Representations:**
+
+1. **TF-IDF Vectors:** Transformed each document into a TF-IDF vector.
+2. **Word Embeddings:** Generated document embeddings by averaging Word2Vec vectors.
+
+**Similarity Calculations:**
+
+* Computed pairwise cosine similarities between all document vectors.
+* Presented similarity matrices for both TF-IDF and Word2Vec embeddings.
+
+**Visualization & Results:**
+
+* **Heatmaps** for TF-IDF and embedding-based similarities:
+
+  * Highlighted clusters of highly similar documents.
+* **Dendrogram** from hierarchical clustering on similarity distances:
+
+  * Showed document grouping structure.
+
+**Key Findings:**
+
+* TF-IDF and embedding-based similarities largely agree on document clusters.
+* Embeddings capture semantic relationships not obvious in keyword overlap (TF-IDF), e.g., synonyms or paraphrases.
+
+---
+
+**Conclusion:**
+
+* The **N-grams.ipynb** notebook provides a foundation for understanding the most frequent terms and phrases in a corpus, useful for feature engineering.
+* The **Similarities between texts.ipynb** notebook demonstrates methods to quantify and visualize document similarity, critical for tasks like clustering, retrieval, and recommendation.
+
+
+
 
