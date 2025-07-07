@@ -130,6 +130,25 @@ For each, we:
 2. Printed the best parameter combination.
 3. Stored the results for comparison.
 
+**Hyperparameter Optimization Results**
+
+After running `GridSearchCV` on the Word2Vec-based supervised models, we obtained the following best parameter combinations:
+
+| Model             | Best Parameters                                                  |
+| ----------------- | ---------------------------------------------------------------- |
+| **Random Forest** | `{'n_estimators': 200, 'max_depth': 20, 'min_samples_split': 5}` |
+| **GBM**           | `{'n_estimators': 200, 'learning_rate': 0.2, 'max_depth': 5}`    |
+| **XGBoost**       | `{'n_estimators': 200, 'learning_rate': 0.2, 'max_depth': 5}`    |
+
+**Interpretation:**
+
+* **Higher tree counts (`n_estimators=200`)** reduced variance and improved stability across all ensemble methods.
+* **Random Forest** benefitted from **deeper trees** (`max_depth=20`) to capture complex decision boundaries.
+* **Boosting methods** (GBM, XGBoost) favored **shallower trees** (`max_depth=5`) paired with a **moderate learning rate** (`0.2`) to balance convergence speed and generalization.
+* **`min_samples_split=5`** in Random Forest helped prevent overfitting by requiring more samples to split an internal node.
+
+
+
 
 # N-grams
 
